@@ -12,3 +12,60 @@ body{background:#fffaf0}.sidebar{background:linear-gradient(170deg,#143d5d,#0d29
 
 /* Landing-page composition inspired by approved vivid poster */
 .hero{background:radial-gradient(ellipse at 92% 25%,#b8e7ff 0%,transparent 38%),radial-gradient(ellipse at 12% 85%,#ffbd8b 0%,transparent 43%),linear-gradient(140deg,#fff8ee 5%,#ffe3c9 60%,#d1d8ff 100%);grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:15px;overflow:hidden}.hero-hook{font-size:clamp(35px,4.2vw,64px);color:#ff4d13;letter-spacing:-2px;text-transform:uppercase}.hero h1{font-size:clamp(64px,8vw,116px);color:#101d30}.phone-pair{position:relative;min-height:475px;display:flex;align-items:center;justify-content:center;isolation:isolate}.device.android{z-index:2;transform:translate(18%,0) rotate(-5deg) scale(1.2);box-shadow:0 24px 42px #15253f66}.device.iphone{z-index:1;transform:translate(-13%,7%) rotate(7deg) scale(1.12);border-color:#5d287c;background:#5d287c;box-shadow:0 24px 42px #552a7b6b}.iphone .screen{background:linear-gradient(160deg,#8a16ec 0%,#f73cbd 38%,#ffa5e0 67%,#f1c3ff 100%)}.iphone .ios-title{color:#fff;font-family:Arial,sans-serif;font-weight:900}.iphone .ios-subtitle{color:#fff}.iphone .ios-illustration{background:#fff6;box-shadow:0 0 0 8px #fff5}.iphone .ios-card{background:#fffdf4}.download-heading{font-size:clamp(24px,3vw,40px)!important;color:#fe4b0b!important}.download-intro{font-weight:700;color:#203a55}.store-link{background:linear-gradient(100deg,#26c75d,#008a6d);font-size:12px}.iphone .store-link{background:linear-gradient(100deg,#057be9,#214edb)}.hero-share{background:#fff4e7c9;border-left:6px solid #ff6018}.tiles article{background:linear-gradient(150deg,#fff,#f2f9ff)}@media(max-width:960px){.hero{grid-template-columns:1fr}.phone-pair{min-height:500px}.device.android{transform:translate(16%,0) rotate(-5deg) scale(1.16)}.device.iphone{transform:translate(-16%,7%) rotate(7deg) scale(1.1)}}@media(max-width:650px){.hero{padding:30px 20px 65px}.hero-hook{font-size:clamp(31px,8vw,46px)}.hero h1{font-size:74px;letter-spacing:-4px}.phone-pair{min-height:415px;gap:0}.device.android{transform:translate(19%,0) rotate(-5deg) scale(1.02)}.device.iphone{transform:translate(-19%,8%) rotate(7deg) scale(.96)}.store-link{top:calc(100% + 42px)}.download-heading{font-size:25px!important}}
+
+/* Illuminated cards for the three project sections */
+.idea-card,.project-cards > article{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.9);
+  border-radius:30px;
+  box-shadow:0 16px 36px rgba(31,70,95,.11),inset 0 1px 0 rgba(255,255,255,.95);
+}
+.content.idea-card{
+  margin:36px 6% 24px;
+  padding:36px 40px;
+  background:
+    radial-gradient(ellipse at 5% 0%,rgba(255,255,255,.98) 0%,rgba(255,253,219,.8) 17%,transparent 58%),
+    radial-gradient(ellipse at 100% 100%,#ffbba6 0%,transparent 68%),
+    linear-gradient(125deg,#ffe19a 0%,#ffedc0 46%,#ffd0ba 100%);
+  box-shadow:0 16px 36px rgba(190,118,58,.15),inset 0 1px 0 #fff;
+}
+.content.project-cards{
+  border:0;
+  padding:0;
+  margin:0 6% 38px;
+  gap:24px;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+.project-cards > article{
+  min-width:0;
+  padding:34px 32px;
+  scroll-margin-top:24px;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.project-cards > #inventions{
+  background:
+    radial-gradient(ellipse at 4% 0%,#fff 0%,rgba(231,255,249,.9) 15%,transparent 58%),
+    radial-gradient(ellipse at 100% 100%,#79daca 0%,transparent 70%),
+    linear-gradient(135deg,#c2f6eb 0%,#d0f3ff 55%,#a3dced 100%);
+  box-shadow:0 16px 36px rgba(25,139,134,.16),inset 0 1px 0 #fff;
+}
+.project-cards > #startups{
+  background:
+    radial-gradient(ellipse at 4% 0%,#fff 0%,rgba(255,240,252,.95) 16%,transparent 60%),
+    radial-gradient(ellipse at 100% 100%,#c0a0f0 0%,transparent 70%),
+    linear-gradient(135deg,#f7d2e9 0%,#eee0ff 50%,#d1c7ff 100%);
+  box-shadow:0 16px 36px rgba(122,83,173,.16),inset 0 1px 0 #fff;
+}
+.idea-card h2,.project-cards h2{color:#17384d;margin:14px 0 18px}
+.idea-card p,.project-cards p{color:#314c60}
+.project-cards .inline-link{color:#115963;text-underline-offset:4px}
+@media(hover:hover) and (prefers-reduced-motion:no-preference){
+  .project-cards > article:hover{transform:translateY(-4px);box-shadow:0 22px 42px rgba(36,77,112,.2),inset 0 1px 0 #fff}
+}
+@media(max-width:650px){
+  .content.idea-card{margin:24px 20px 18px;padding:28px 24px;border-radius:24px}
+  .content.project-cards{margin:0 20px 28px;grid-template-columns:minmax(0,1fr);gap:18px}
+  .project-cards > article{padding:28px 24px;border-radius:24px}
+}
