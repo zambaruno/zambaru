@@ -141,3 +141,10 @@ button,select,input,textarea{font-family:inherit}
   .hero h1{font-size:84px;letter-spacing:.045em}
   .content.blog-card{margin:0 20px 28px;padding:28px 24px;border-radius:24px}
 }
+
+/* No active download controls until approved public files exist. */
+.store-link:disabled,.iphone .store-link:disabled,.store-link[aria-disabled="true"]{background:#dcebec;color:#3f626c;border:1px solid #b6d0d4;box-shadow:none;cursor:default;filter:none;font-family:inherit}
+.store-link:disabled:hover,.store-link[aria-disabled="true"]:hover{filter:none}
+.store-status{max-width:430px;margin:24px auto 0;font-size:14px;line-height:1.5;color:#315b68}
+
+.android-test-download{text-decoration:none;text-align:center;line-height:1.35}
