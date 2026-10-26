@@ -148,3 +148,10 @@ button,select,input,textarea{font-family:inherit}
 .store-status{max-width:430px;margin:24px auto 0;font-size:14px;line-height:1.5;color:#315b68}
 
 .android-test-download{text-decoration:none;text-align:center;line-height:1.35}
+
+/* Keep installation controls outside the tilted phone illustrations. */
+.download-area .phone-pair{padding-bottom:70px;min-height:510px}
+.platform-downloads{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:440px;margin:10px auto 0;position:relative;z-index:3}
+.platform-downloads .store-link{position:static;transform:none;width:auto;max-width:none;padding:12px 10px;font-size:13px;line-height:1.4;border-radius:12px}
+.store-status{margin-top:16px}
+@media(max-width:650px){.download-area .phone-pair{min-height:430px;padding-bottom:65px}.platform-downloads{gap:8px}.platform-downloads .store-link{font-size:12px}}
