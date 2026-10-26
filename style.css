@@ -69,3 +69,75 @@ body{background:#fffaf0}.sidebar{background:linear-gradient(170deg,#143d5d,#0d29
   .content.project-cards{margin:0 20px 28px;grid-template-columns:minmax(0,1fr);gap:18px}
   .project-cards > article{padding:28px 24px;border-radius:24px}
 }
+
+/* Classic editorial lettering and cool turquoise opening */
+:root{--cream:#edf8f6;--ink:#214b59;--muted:#476876;--accent:#147b83}
+body{font-family:Georgia,"Times New Roman",serif;background:#edf8f6;color:#214b59}
+button,select,input,textarea{font-family:inherit}
+.brand,.eyebrow,.kicker,.section-no,.sidebar nav,.diagnostic,.actions,.download-intro,.store-link,footer{font-family:Georgia,"Times New Roman",serif}
+.brand{letter-spacing:2px}
+.top{background:#f5fcfa}
+.hero{
+  background:
+    radial-gradient(ellipse at 8% 4%,rgba(255,255,255,.98) 0%,transparent 48%),
+    radial-gradient(ellipse at 94% 18%,rgba(132,226,221,.8) 0%,transparent 52%),
+    radial-gradient(ellipse at 20% 100%,rgba(161,225,217,.8) 0%,transparent 55%),
+    linear-gradient(135deg,#f1fcf9 0%,#c8eee9 53%,#b8dee9 100%);
+}
+.hero-hook{
+  font-family:"Times New Roman",Georgia,serif!important;
+  font-size:clamp(35px,4.2vw,60px);
+  font-weight:700!important;
+  letter-spacing:.01em;
+  text-transform:none;
+  color:#176b78;
+  line-height:1.12;
+}
+.hero h1{
+  font-family:"Times New Roman",Times,serif;
+  font-size:clamp(80px,9vw,128px);
+  font-weight:700;
+  letter-spacing:.055em;
+  line-height:1.08;
+  color:#126774;
+  margin:12px 0 22px;
+}
+.hero .kicker{color:#27727a}
+.hero .lead{font-family:Georgia,"Times New Roman",serif;color:#245666}
+.hero-share{
+  background:linear-gradient(125deg,rgba(255,255,255,.88),rgba(231,252,247,.75));
+  border-left-color:#38a49e;
+  border-radius:0 16px 16px 0;
+  color:#245361!important;
+  box-shadow:0 7px 22px rgba(33,113,119,.09);
+}
+.download-heading{
+  font-family:"Times New Roman",Georgia,serif!important;
+  font-weight:700!important;
+  color:#176b78!important;
+  letter-spacing:.015em;
+}
+.download-intro{color:#2a5a67;font-weight:400;font-size:16px}
+.primary{background:#197e83}
+.secondary{background:#f5fffd;border-color:#81c7c3;color:#225f6b}
+.content h2,.ios-title,.ios-card strong,.iphone .ios-title{font-family:"Times New Roman",Georgia,serif}
+.content.blog-card{
+  position:relative;
+  overflow:hidden;
+  margin:0 6% 38px;
+  padding:36px 40px;
+  border:1px solid rgba(255,255,255,.9);
+  border-radius:30px;
+  background:
+    radial-gradient(ellipse at 5% 0%,#fff 0%,rgba(220,242,255,.92) 17%,transparent 58%),
+    radial-gradient(ellipse at 100% 100%,#699ee3 0%,transparent 68%),
+    linear-gradient(125deg,#cbeaff 0%,#bad8fb 50%,#91b8f0 100%);
+  box-shadow:0 16px 36px rgba(48,100,165,.17),inset 0 1px 0 #fff;
+}
+.blog-card h2{color:#173e70;margin:14px 0 18px}
+.blog-card p{color:#294e75}
+@media(max-width:650px){
+  .hero-hook{font-size:clamp(32px,8vw,46px);letter-spacing:0}
+  .hero h1{font-size:84px;letter-spacing:.045em}
+  .content.blog-card{margin:0 20px 28px;padding:28px 24px;border-radius:24px}
+}
