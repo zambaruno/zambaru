@@ -26,3 +26,11 @@ Status: approved product requirement; implementation and end-to-end tests pendin
 - Two project identities cannot be crossed; registered data remains intact after expiry.
 
 Do not claim this feature is deployed until server, website, mobile UI, migrations and tests have been completed and verified.
+
+## Mobile QR scanner entry point (approved)
+- Show a recognizable QR scanner icon in the signed-in mobile application's main navigation or account menu; tapping it opens the device camera with a scanning frame.
+- The phone scans the **website's** temporary QR challenge displayed on the desktop monitor; the phone does not need to display its own permanent QR code.
+- After scan, show project, browser/device and an explicit **Approve desktop sign-in** button plus Cancel. Reject untrusted QR origins, expired or consumed challenges.
+- Request camera permission only when scanner is opened; explain denial and allow retry. Never sign in a desktop automatically merely by scanning.
+- After approval, show success on the phone; the desktop completes the one-time exchange and retains the 30-day sliding session as specified above.
+- Keep scanner available on mobile, but do not confuse this sign-in scanner with unrelated QR links (posters, sharing, etc.).
