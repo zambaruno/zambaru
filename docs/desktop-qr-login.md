@@ -34,3 +34,9 @@ Do not claim this feature is deployed until server, website, mobile UI, migratio
 - Request camera permission only when scanner is opened; explain denial and allow retry. Never sign in a desktop automatically merely by scanning.
 - After approval, show success on the phone; the desktop completes the one-time exchange and retains the 30-day sliding session as specified above.
 - Keep scanner available on mobile, but do not confuse this sign-in scanner with unrelated QR links (posters, sharing, etc.).
+
+## Desktop registration policy (approved 2026-10-28)
+- Remove **desktop account creation / sign-up forms** for both projects; preserve existing desktop sign-in capability until QR sign-in is fully operational to avoid locking out users.
+- Desktop sign-in page shows a short-lived QR challenge and a clear prompt to create an account using the respective mobile app. No desktop signup.
+- Signed-in desktop users may still upload existing images, edit descriptions, register or manage equipment and participate in diagnostics, subject to authorization. Do not remove these features merely because mobile signup is required.
+- Roll out QR sign-in and mobile scanner with working backend first; only then disable desktop signup and legacy sign-in options after testing and migration planning.
