@@ -1,13 +1,29 @@
-ZAMBARU STATIC SITE — PREVIEW VERSION
+ZAMBARU / LOST WEBSITE
 
-Files: index.html, style.css, script.js
+The main page at https://zambaru.com/ is the LOST lost-and-found landing page.
+It uses assets/home.css, assets/home.js and the actual LOST emblem.
+The page and download instructions support English, Russian, Spanish and Turkish.
 
-Upload all three files together, preserving their names, to a NEW Cloudflare project for testing. Do not switch zambaru.com until you have reviewed the preview.
+Main routes:
+- /: LOST homepage, browser entry, installation entry, guide and poster links.
+- /lost-app: existing LOST browser application; its data/auth implementation is preserved.
+- /lost-guide: existing LOST guide.
+- /lost/download/: permanent installation information and current APK link.
+- /downloads/lost.apk: Cloudflare Pages 302 redirect to the tested public GitHub release asset.
+- /projects/: secondary Zambaruno projects, author information and blog placeholder.
+- /inventions/dispenser/: existing dispenser project, preserved.
 
-Important:
-- This is a first working layout based on the agreed description, not a pixel-perfect copy of the original reference image.
-- The two phone graphics are CSS concept illustrations, not screenshots of a functioning mobile application.
-- Language selector supports English, Russian and Azerbaijani for this preview; the 16-language poster generator is not implemented.
-- Zambaruno Diagnostic link goes to zambaruno.com; verify destination before public launch.
-- /inventions/dispenser is a placeholder route; create that page before launch.
-- No user registration, database, LOST backend, poster generator, or APK distribution is implemented in this static preview.
+APK publishing:
+The APK is hosted as a public GitHub release asset, outside expiring Actions artifacts.
+The initial release is android-build-68 in zambaruno/lost, asset LOST-68.apk.
+The matching publish-tested-download workflow verifies the APK SHA-256 before uploading.
+Updating _redirects changes the APK target without changing the public download address.
+Do not point this route at an untested build or at an Actions run.
+
+This is Android test build 68 for ARM64. There is no native iPhone download.
+The earlier test builds did not preserve a fixed signing certificate. Keep the installation
+notice until permanent app signing has been set up and verified across consecutive builds.
+
+Deploy the repository root as the static Cloudflare Pages directory.
+Cloudflare Pages consumes _redirects; a generic local file server does not execute it.
+robots.txt and sitemap.xml advertise the public information pages. Indexing is not guaranteed.
