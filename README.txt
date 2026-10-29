@@ -9,14 +9,17 @@ Main routes:
 - /lost-app: existing LOST browser application; its data/auth implementation is preserved.
 - /lost-guide: existing LOST guide.
 - /lost/download/: permanent installation information and current APK link.
-- /downloads/lost.apk: Cloudflare Pages 302 redirect to the tested public GitHub release asset.
+- /downloads/lost.apk: Cloudflare Pages 302 redirect to the tested APK in permanent public object storage.
 - /projects/: secondary Zambaruno projects, author information and blog placeholder.
 - /inventions/dispenser/: existing dispenser project, preserved.
 
 APK publishing:
-The APK is hosted as a public GitHub release asset, outside expiring Actions artifacts.
-The initial release is android-build-68 in zambaruno/lost, asset LOST-68.apk.
-The matching publish-tested-download workflow verifies the APK SHA-256 before uploading.
+The APK is stored in R2 behind a public binary-only download host, outside expiring Actions artifacts.
+Host: https://lost-android-downloads.frosty-tick-7668.chatgpt.site/LOST-68.apk
+Build: 68; size: 96799541 bytes.
+SHA-256: c43b2ddaf231a3f74bc5c721e3ee7d76d2fc73adc99805a4e75269197f63f55d
+The imported bytes were checked against that checksum. The GitHub app repository stays private.
+The temporary import credential was removed after the object was saved.
 Updating _redirects changes the APK target without changing the public download address.
 Do not point this route at an untested build or at an Actions run.
 
