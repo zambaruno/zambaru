@@ -1,7 +1,7 @@
 ZAMBARU / LOST WEBSITE
 
 The main page at https://zambaru.com/ is the LOST lost-and-found landing page.
-It uses assets/home-v3.css, assets/home-v3.js and the actual LOST emblem.
+It uses assets/home-v4.css, assets/home-v4.js and the actual LOST emblem.
 The page and download instructions support English, Spanish, German, Arabic, Chinese, Russian, Azerbaijani and French.
 
 Main routes:
@@ -31,4 +31,4 @@ Deploy the repository root as the static Cloudflare Pages directory.
 Cloudflare Pages consumes _redirects; a generic local file server does not execute it.
 robots.txt and sitemap.xml advertise the public information pages. Indexing is not guaranteed.
 
-The homepage shows a direct Zambaruno Diagnostic panel below the LOST header, with the free diagnostic invitation in all eight Zambaru languages. The linked Diagnostic site manages its own language choices.
+The home, download and projects pages show one slim full-width Diagnostic link below their headers. Its text follows the selected Zambaru language. A globe icon identifies the language selector. The linked Diagnostic site manages its own language choices.
